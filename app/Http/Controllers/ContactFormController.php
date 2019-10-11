@@ -9,7 +9,7 @@ class ContactFormController extends Controller
 {
     public function create()
     {
-        return view('contact-form.create');
+        return view('admin.contact-form.create');
     }
 
     public function store(\App\Http\Requests\ContactForm\Store $request)

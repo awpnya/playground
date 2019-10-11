@@ -27,6 +27,7 @@ class EmailValidate implements Rule
     public function passes($attribute, $value)
     {
        // return containsOnly($value) >= $this->result;
+       return Str::endsWith($value, ['.go.id', '.ac.id', '.or.id']);
     }
 
     /**
@@ -36,6 +37,6 @@ class EmailValidate implements Rule
      */
     public function message()
     {
-        //return "{$this->result}The validation error meaaaaaaaaaaaaassage.";
+        return "    The validation error meaaaaaaaaaaaaassage.";
     }
 }

@@ -26,7 +26,7 @@ class Store extends FormRequest
     {
         return [
             'name' => ['required', new \App\Rules\MinimumWords(2)],
-            'email' => ['required', 'email'],
+            'email' => ['required', 'email', new \App\Rules\EmailValidate(2)],
             'message' => ['required', 'min:20'],
         ];
     }
